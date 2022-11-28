@@ -1,1 +1,1 @@
-# CSC212-Final-Project-Segment-Tree-
+# CSC212 Final Project (Segment Tree)

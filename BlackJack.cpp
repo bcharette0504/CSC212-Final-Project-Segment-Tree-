@@ -1,6 +1,16 @@
 // BlackJack.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
+/*   int COUNT = 0;
+        int differencebetweendealeranduser = usersvalue - dealersvalue;
 
+        while (lowestcardthatbeatsuser)
+        {
+            if (values[COUNT] == differencebetweendealeranduser)
+                lowestcardthatbeatsuser == false;
+            else
+                COUNT++;
+        }
+*/
 #include <iostream>
 #include <string>
 #include <random>

@@ -1,6 +1,3 @@
-// BlackJack.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include "SegTree.h"
 #include <string>
@@ -196,7 +193,7 @@ int main()
                             std::cout << "Sorry but you lost\n";
                             break;
                         }
-                    }
+
 
                     myTree.probOfDealerBetter(usersvalue,dealersvalue);
                     std::cout << "\n Stand or Hit? \n";
@@ -226,3 +223,5 @@ int main()
         std::cout << std::endl;
     }
 }
+
+

@@ -1,8 +1,14 @@
 # CSC212 Final Project (Segment Tree)
-This project will use a segement tree to predict the probability of certain outcomes to give better judgement on whether the player should hit or stand.
+This project will use a segement tree to predict the probability of certain outcomes to give better judgement on whether the player should hit or stand. A blackjack program and Segment Tree program was created for this project. 
 
 ## Introduction
-A segment tree is a data structure that uses a linear data structure such as an array. The leaves of this tree are the the elements in order in the array. Each parent node is the sum of two elements. This process is repeated until its reach the root. The root would be the total sum of all of the elements in the array. Below is a depiction of a simple segment tree. 
+A segment tree is a data structure that uses a linear data structure such as an array. The leaves of this tree are the the elements in order in the array. Each parent node is the sum of two elements. This process is repeated until its reach the root. The root would be the total sum of all of the elements in the array. Segment trees have a time complexitity of O(n log n) Below is a depiction of a simple segment tree.
+
+![](images/segmenttree.png)
+
+## Implementation 
+Three files are created for this project: SegTree.h, SegTree.cpp and main.cpp. Implementation of the Segment Tree class is what is used to create the different types of probabilites that can help in a player turn. 
+
 
 ## Setup
 1. Open your terminal in the proper directory.

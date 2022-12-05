@@ -11,7 +11,7 @@ Three files are created for this project: SegTree.h, SegTree.cpp and main.cpp. I
 
 
 ## Setup
-1. Open your terminal in the proper directory.
+1. Open your terminal in the proper directory and download the three files.
 2. Compile - ```g++ main.cpp SegTree.cpp -o blackjack```.
 3. Run the program - ```./blackjack```.
 4. The terminal will output the dealers card, your cards, your total count, and probability of the dealer having a higher card than you.

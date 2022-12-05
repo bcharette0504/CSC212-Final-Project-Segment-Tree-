@@ -15,6 +15,7 @@ Three files are created for this project: SegTree.h, SegTree.cpp and main.cpp. I
 2. Compile - ```g++ main.cpp SegTree.cpp -o blackjack```.
 3. Run the program - ```./blackjack```.
 4. The terminal will output the dealers card, your cards, your total count, and probability of the dealer having a higher card than you.
+5. It will also tell you the probability of not going over 21 aswell as having a faborable hand (17-21) based on your your total count.
 5. Choose hit or stand.
 6. Depending on what you choose it will prompt you to hit again or if you won or lost.
 7. It will then promt you if you want to continue playing or not.

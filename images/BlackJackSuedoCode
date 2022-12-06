@@ -1,0 +1,64 @@
+Suedo Code for Blackjack!
+
+# Start Writing Here
+drawcard()
+{
+    check to make sure theres still cards in the deck
+    if not 
+        {
+            randint%13 to get random card!
+        }
+    
+}
+checkvalues(){
+    used to see who won blackjack!
+}
+drawcard(){
+while(theres still cards in deck)
+    randint%13 = newcard
+    check to see if card has cards left
+        if not draw that card
+            subtract one of the cards from the array;
+            if there are no cards left
+}
+main()
+{
+    make arrays full of card values, the physical cards, and the amount of the cards
+    while (theres still cards in the deck)
+        {
+            make empty vectors w user and dealers physical card.
+            dealerscard.push_back(drawcard()) //draws dealers first card
+            for (0 -> 2) //2 iterations
+                {
+                    userscard.push_back(drawcard())
+                }
+            print out users cards and dealers cards
+            std::cin -> userinput
+            check if user wants to stand or hit
+            if user stands 
+                {
+                    dealerscard.pushback(drawcard())
+                }
+            if user hits
+                {
+                while (usercontinues to hit)
+                    {
+                        userscard.push_back(drawcard())
+                        std::cin -> userinput
+                        if (userinput == stand)
+                        {
+                            break;
+                            check values
+                        }
+                        Else:
+                            {
+                                continue; //meaning check to see if user wants to hit.
+                            }
+                            
+                    }
+                    
+                }
+                
+                
+        }
+}

@@ -20,4 +20,5 @@ Three files are created for this project: SegTree.h, SegTree.cpp and main.cpp. I
 6. Depending on what you choose it will prompt you to hit again or if you won or lost.
 7. It will then promt you if you want to continue playing or not.
 
+## Example Execution
 ![image](https://user-images.githubusercontent.com/98423649/205794562-8bbf3fd2-b5f3-432f-8d64-9b5b42fc4664.png)

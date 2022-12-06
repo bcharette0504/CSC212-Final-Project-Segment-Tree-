@@ -113,34 +113,39 @@ int SegmentTree::findSegSum(int start, int end, int current, int lSeg, int rSeg)
 
 }
 
+//function to find the probability of the dealer having a better hand than you
 void SegmentTree::probOfDealerBetter(int usersvalue, int dealersvalue) {
     int values[13] = { 2,3,4,5,6,7,8,9,10,10,10,10,11 };
     bool lowestcardthatbeatsuser = true;
     int COUNT = 0;
+    //finds how much higher your count is than the dealers count
     int differencebetweendealeranduser = usersvalue - dealersvalue;
+    //creates the starting point of the segment tree sum
     if (differencebetweendealeranduser < 2)
     {
         differencebetweendealeranduser = 2;
     }
+    //finds the starting index of the cards in range
     while (lowestcardthatbeatsuser)
     {
-        if (values[COUNT] == differencebetweendealeranduser || differencebetweendealeranduser > 11)
+        if (values[COUNT] >= differencebetweendealeranduser)
             lowestcardthatbeatsuser = false;
         else
             COUNT++;
     }
-    //std::cout << "count: " << COUNT << std::endl;
     create_segTree(1, 0, 12);
+    //finds the sum of cards in the range needed for the dealer to beat your count
     segSum = findSegSum(start, end, current, (COUNT), 12);
     double test1 = double(segSum);
     double test2 = double(segment_tree[1]);
     std::cout << "The dealer has " << segSum << " cards that are better than yours out of " << segment_tree[1] << std::endl;
-    //std::cout << segment_tree[1] << std::endl;
+    //finds the probability of the dealer having a card to beat your count
     double prob = ((test1 / test2) * 100);
     outputGraph("outfile");
     std::cout << "The chances of the dealer having a better card than you on the next turn is " << prob << "%" << std::endl;
 }
 
+//function to find the probability of the you not going over 21
 void SegmentTree::probOfNotGoingOver21(int usersvalue){
 
 
@@ -149,21 +154,26 @@ void SegmentTree::probOfNotGoingOver21(int usersvalue){
     double test1;
     double test2;
     double prob;
+    
+    //finds the highest card value that wouldn't bust
     difference = 21 - usersvalue;
     create_segTree(1, 0, 12);
-
+    
+    //if 1 is the only count then ace is the only card to not bust your count
     if(difference == 1){
         sum = findSegSum(start, end, current, 12, 12);
         test1 = double(sum);
         test2 = double(segment_tree[1]);
         prob = ((test1 / test2) * 100);
     }
-    else if(difference > 11){
+    //if your difference is higher than 11 then all of the cards would make you not bust
+    else if(difference >= 10){
         sum = findSegSum(start, end, current, 0, 12);
         test1 = double(sum);
         test2 = double(segment_tree[1]);
         prob = ((test1 / test2) * 100);
     }
+    //if your cards are between 1 and 11 then this will call our findSegSum function to find the sum of cards that won't bust
     else {
         sum = findSegSum(start, end, current, 0, difference-2) + findSegSum(start, end, current, 12, 12) ;
         test1 = double(sum);
